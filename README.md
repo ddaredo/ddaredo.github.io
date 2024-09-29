@@ -21,7 +21,7 @@ I’m a big fan of morning coffee—it’s the best way to start my day!</P>
 </ul>
 <li><b>Websites I Recommed</b></li>
 <ul>
-<li><a href="https://www.linkedin.com">Linkedln : A professional networking platform.</a></li> A professional networking platform.
+<li><a href="https://www.linkedin.com">Linkedln</a></li> A professional networking platform.
 <li><a href="https://www.github.com">github</a></li> A great platform for collaborating on open-source 
 projects and storing code repositories.
 </ul>
