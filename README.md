@@ -2,7 +2,6 @@
 # Name: Dereje Aredo
 # Email: ddaredo@my.waketech.edu
 About Me.
-
 I’m an enthusiastic IT professional with a passion for technology and problem-solving. Academically, I’m pursuing an Associate Degree in IT Service and Support. I enjoy exploring web development and systems management, currently deepening my knowledge through courses like CTI-110.
 
 In my free time, I like staying up to date with open-source technologies like Ubuntu, which aligns with my interest in practical software solutions. Outside of tech, I’m a big fan of morning coffee—it’s the best way to start my day!
