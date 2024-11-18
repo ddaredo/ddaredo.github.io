@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <py-config>
+        packages = ["numpy"]
+    </py-config>
+
+    <py-script>
+        import numpy as np
+
+        # Generate a random number
+        selection = np.random.randint(0, 100)
+        print(f"The secret number is: {selection}")  # Debugging purpose (check console output)
+
+        def check_guess(event=None):
+            try:
+                # Access user input
+                user_guess = int(Element("guess").value)
+                result = Element("result")
+
+                # Compare the guess to the selection
+                if user_guess == selection:
+                    result.element.innerHTML = ("Yeah! 🎉 Congratulations! You guessed correctly.Thank you for Playing.")
+                elif user_guess > selection:
+                    result.element.innerHTML = ("Ohh! No, 🔼 Too high! Try again.")
+                else:
+                    result.element.innerHTML = ("Ohh! No,🔽 Too low! Try again.")
+            except ValueError:
+                # Handle invalid input
+                Element("result").element.innerHTML = ("⚠️ Please enter a valid number!")
+
+        # Bind Python function to button click
+        Element("submit").element.onclick = check_guess
+    </py-script>
+
+    <form>
+        <label for="guess">Guess:</label>
+        <input name="guess" id="guess" type="number" min="0" max="100" />
+        <button type="button" id="submit">Check Guess</button>
+        <label for="result">Result:</label><div name="result" id="result"></div>
+    </form>
+</body>
+</html>
